@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcance del Sistema</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 1100px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 40px auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .contenedor-central p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 10px 0 20px 30px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./analisis.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Alcance del Sistema</h2>
+
+            <p>
+                El sistema <strong>QuickOrder</strong> permitirá a los clientes de un restaurante realizar pedidos de forma
+                digital, sin depender de la intervención directa de un mesero. Los clientes podrán consultar el menú,
+                personalizar sus pedidos, realizar pagos electrónicos y dar seguimiento en tiempo real al estado de su
+                orden.
+            </p>
+
+            <p>
+                A nivel interno, el software permitirá al personal del restaurante organizar los pedidos recibidos,
+                optimizar el flujo de trabajo en la cocina y gestionar la entrega de alimentos de manera más eficiente.
+                La base de datos centralizada garantizará que toda la información se procese en tiempo real y que se
+                mantenga la trazabilidad de cada pedido.
+            </p>
+
+            <p><strong>Alcance Funcional</strong></p>
+            <ul>
+                <li>Gestión de usuarios (clientes, meseros, cocineros y administradores).</li>
+                <li>Visualización de menú digital con precios e imágenes.</li>
+                <li>Registro, modificación y cancelación de pedidos en línea.</li>
+                <li>Seguimiento en tiempo real del estado de los pedidos.</li>
+                <li>Gestión de pagos digitales (tarjeta, transferencia o plataformas externas).</li>
+                <li>Generación de reportes básicos sobre ventas y pedidos.</li>
+            </ul>
+
+            <p><strong>Limitaciones</strong></p>
+            <ul>
+                <li>No incluye gestión avanzada de inventario en la primera versión.</li>
+                <li>No contempla integración inicial con aplicaciones externas como Rappi o Uber Eats (se plantea como mejora futura).</li>
+                <li>El sistema está diseñado inicialmente para restaurantes medianos, no para cadenas con múltiples sedes simultáneamente.</li>
+            </ul>
+
+            <p>
+                En resumen, el alcance de QuickOrder abarca la automatización del proceso de pedidos dentro del
+                restaurante, la optimización del servicio al cliente y el soporte a la gestión interna del personal,
+                contribuyendo a mejorar la eficiencia y la calidad del servicio.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+</html>
