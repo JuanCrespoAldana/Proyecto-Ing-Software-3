@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos No Funcionales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            margin: 40px auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .contenedor-central h3 {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #34495e;
+            margin: 40px 0 15px 0;
+            border-left: 6px solid #3498db;
+            padding-left: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 10px 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #1A5276;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaf2f8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./analisis.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Requisitos No Funcionales</h2>
+
+            <!-- Facilidad de Uso -->
+            <h3>Facilidad de Uso</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-001</td>
+                        <td>Publicidad</td>
+                        <td>Antes de intensificar el uso del sistema, los usuarios deben conocer su modo de uso.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-002</td>
+                        <td>Actualización de Información</td>
+                        <td>Actualizar la información por ingreso o retiro de algún trabajador.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-003</td>
+                        <td>Diseño Intuitivo</td>
+                        <td>Diseño adecuado a las necesidades del usuario, interfaz atractiva y carga rápida.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Confiabilidad -->
+            <h3>Confiabilidad</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-004</td>
+                        <td>Disponibilidad</td>
+                        <td>El sistema debe estar disponible las 24 horas del día.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-005</td>
+                        <td>Actualización de BD</td>
+                        <td>Asegurar la permanente actualización de la base de datos al registrar información.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Ambiente de Trabajo -->
+            <h3>Ambiente de Trabajo</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-006</td>
+                        <td>Tiempo de Respuesta</td>
+                        <td>Minimizar el tiempo de respuesta a un promedio de 15 segundos.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-007</td>
+                        <td>Capacidad de Almacenamiento</td>
+                        <td>Asignar suficiente espacio a la base de datos para soportar grandes cantidades de información.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-008</td>
+                        <td>Configuración del Equipo</td>
+                        <td>Configurar adecuadamente el equipo para soportar la instalación del sistema.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Restricciones de Diseño -->
+            <h3>Restricciones de Diseño</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-009</td>
+                        <td>Lenguaje de Programación</td>
+                        <td>El sistema debe implementarse en Java.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-010</td>
+                        <td>Licenciamiento</td>
+                        <td>El sistema requiere licenciamiento para su desarrollo.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Seguridad -->
+            <h3>Seguridad</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-011</td>
+                        <td>Encriptación de Contraseñas</td>
+                        <td>Las contraseñas deben ser almacenadas encriptadas con un algoritmo criptográfico.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-012</td>
+                        <td>Backup de Datos</td>
+                        <td>Realizar un backup de datos en disco o cinta para disponer de un nivel adicional de protección.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-013</td>
+                        <td>Operaciones Seguras</td>
+                        <td>Todas las operaciones de consulta y modificación deben ser seguras.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Documentación -->
+            <h3>Documentación y Sistemas de Ayuda</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-014</td>
+                        <td>Capacitación</td>
+                        <td>Capacitación a los usuarios para asegurar un buen manejo del sistema.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-015</td>
+                        <td>Manuales</td>
+                        <td>Proveer manuales de usuario.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Interfaz de Usuario -->
+            <h3>Interfaz de Usuario</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-016</td>
+                        <td>Dispositivo</td>
+                        <td>El sistema será manejado en un computador de escritorio.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-017</td>
+                        <td>Colores</td>
+                        <td>Los colores de la aplicación serán gris oscuro, azul claro y blanco.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-018</td>
+                        <td>Fuente</td>
+                        <td>El texto será en color negro, con fuente Arial tamaño 11.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Interfaces de Comunicación -->
+            <h3>Interfaces de Comunicación</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RNF-019</td>
+                        <td>Acceso Web</td>
+                        <td>El acceso al software será vía web, asegurando estabilidad y seguridad.</td>
+                    </tr>
+                    <tr>
+                        <td>RNF-020</td>
+                        <td>Comunicación Estable</td>
+                        <td>Debe existir comunicación estable con la interfaz de usuario.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+</html>

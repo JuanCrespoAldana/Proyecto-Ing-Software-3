@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos de Usuario</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 40px auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 1.05rem;
+        }
+
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #1A5276;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaf2f8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./analisis.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Requisitos de Usuario</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RU-001</td>
+                        <td>Administración de Perfiles</td>
+                        <td>Permitir la creación y modificación de perfiles de usuario con diferentes niveles de acceso al sistema, asegurando la protección de la información sensible.</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>RU-002</td>
+                        <td>Administración de Usuarios</td>
+                        <td>Permitir la capacidad de gestionar usuarios del sistema, incluyendo creación, modificación, inhabilitación y eliminación de cuentas de usuario.</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>RU-003</td>
+                        <td>Gestión Tipo de Pedidos</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros relacionados con los diferentes tipos de pedidos que los clientes pueden realizar, optimizando el proceso de atención al cliente.</td>
+                        <td>Administrador, Cliente</td>
+                    </tr>
+                    <tr>
+                        <td>RU-004</td>
+                        <td>Gestión de Pedidos</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de pedidos, asegurando el control eficiente del estado y detalles de cada pedido.</td>
+                        <td>Administrador, Cajero, Mesero, Cocinero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-005</td>
+                        <td>Gestión Tipo de Personal</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros relacionados con los diferentes tipos de personal, clasificando según roles y responsabilidades.</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>RU-006</td>
+                        <td>Gestión de Personal</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros relacionados con cada miembro del equipo, incluyendo horarios y estado laboral.</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>RU-007</td>
+                        <td>Gestión de Clientes</td>
+                        <td>Facilitar la creación, modificación, consulta y eliminación de registros de clientes, manteniendo datos de contacto, historial e información de preferencias.</td>
+                        <td>Administrador, Clientes</td>
+                    </tr>
+                    <tr>
+                        <td>RU-008</td>
+                        <td>Gestión de Tipos de Alimentos</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de diferentes tipos de alimentos ofrecidos, incluyendo categorías, descripciones, precios y disponibilidad.</td>
+                        <td>Administrador, Cajero, Mesero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-009</td>
+                        <td>Gestión de Alimentos</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros de alimentos disponibles, asegurando el control de inventario, clasificación y frescura.</td>
+                        <td>Administrador, Cocinero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-010</td>
+                        <td>Gestión Tipo de Pago</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros relacionados con los métodos de pago disponibles.</td>
+                        <td>Administrador, Cajero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-011</td>
+                        <td>Gestión de Pagos</td>
+                        <td>Facilitar la creación, modificación, consulta y eliminación de pagos recibidos o pendientes por parte de los clientes, generando comprobantes electrónicos.</td>
+                        <td>Administrador, Cajero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-012</td>
+                        <td>Gestión de Domicilios</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de domicilios, asignando repartidores, direcciones y controlando tiempos de entrega.</td>
+                        <td>Administrador, Clientes</td>
+                    </tr>
+                    <tr>
+                        <td>RU-013</td>
+                        <td>Gestión de Sede</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros de sedes del restaurante, incluyendo dirección, capacidad y horarios de operación.</td>
+                        <td>Administrador, Cliente</td>
+                    </tr>
+                    <tr>
+                        <td>RU-014</td>
+                        <td>Gestión de Ciudad</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros relacionados con las ciudades en las que el restaurante opera.</td>
+                        <td>Administrador, Cliente</td>
+                    </tr>
+                    <tr>
+                        <td>RU-015</td>
+                        <td>Gestión de País</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de registros de países donde el restaurante tiene presencia o planes de expansión.</td>
+                        <td>Administrador, Cliente</td>
+                    </tr>
+                    <tr>
+                        <td>RU-016</td>
+                        <td>Gestión de Mesas</td>
+                        <td>Permitir la creación, modificación, consulta y eliminación de mesas, con control de reservas, estado de ocupación y asignación de clientes.</td>
+                        <td>Administrador, Meseros</td>
+                    </tr>
+                    <tr>
+                        <td>RU-017</td>
+                        <td>Gestión de Monitoreo</td>
+                        <td>Permitir el monitoreo en tiempo real de pedidos, entregas y estado de operaciones, controlando tiempos de servicio y eficiencia del personal.</td>
+                        <td>Administrador, Meseros, Cocinero</td>
+                    </tr>
+                    <tr>
+                        <td>RU-018</td>
+                        <td>Gestión de Informes</td>
+                        <td>Permitir la generación de informes sobre ventas, pedidos, pagos y otros datos clave, con filtros personalizados.</td>
+                        <td>Administrador, Meseros</td>
+                    </tr>
+                    <tr>
+                        <td>RU-019</td>
+                        <td>Gestión de Consultas</td>
+                        <td>Permitir la consulta de información detallada sobre usuarios, clientes, alimentos y transacciones, con filtros de búsqueda personalizados.</td>
+                        <td>Administrador, Cajero</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+</html>
