@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mural De Preguntas</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      color: #2C3E50;
+    }
+
+    .contenedor-central {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      width: 95%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
+    .contenedor-central h2 {
+      font-size: 2.3rem;
+      font-weight: bold;
+      color: #1A5276;
+      margin-bottom: 25px;
+      text-align: center;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+    }
+
+    /* Estilo futurista de la galería */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 150, 255, 0.5);
+    }
+
+    /* Modal fullscreen */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80vh;
+      border-radius: 15px;
+      animation: zoom 0.4s ease-in-out;
+      box-shadow: 0 0 40px rgba(0, 200, 255, 0.7);
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0.7);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .close:hover {
+      color: #3498db;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      transition: background 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: rgba(52, 152, 219, 0.8);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/logo_uni.png" alt="Logo">
+    </div>
+    <h1 class="titulo">Ingeniería de Software 3</h1>
+    <div class="acciones">
+      <a href="./iso9001.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+      <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor-central">
+      <h2>Mural de Preguntas Encadenadas ISO - 9001</h2>
+
+      <div class="gallery">
+        <img src="../img/mural 1.jpeg" onclick="openModal(0)">
+        <img src="../img/mural 2.jpeg" onclick="openModal(1)">
+        <img src="../img/mural 3.jpeg" onclick="openModal(2)">
+        <img src="../img/mural 4.jpeg" onclick="openModal(3)">
+        <img src="../img/mural 5.jpeg" onclick="openModal(4)">
+        <img src="../img/mural 6.jpeg" onclick="openModal(5)">
+        <img src="../img/mural 7.jpeg" onclick="openModal(6)">
+        <img src="../img/mural 8.jpeg" onclick="openModal(7)">
+        <img src="../img/mural 9.jpeg" onclick="openModal(8)">
+        <img src="../img/mural 10.jpeg" onclick="openModal(9)">
+        <img src="../img/mural 11.jpeg" onclick="openModal(10)">
+        <img src="../img/mural 12.jpeg" onclick="openModal(11)">
+        <img src="../img/mural 13.jpeg" onclick="openModal(12)">
+        <img src="../img/mural 14.jpeg" onclick="openModal(13)">
+        <img src="../img/mural 15.jpeg" onclick="openModal(14)">
+        <img src="../img/mural 16.jpeg" onclick="openModal(15)">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Universidad — Ingeniería de Software 3</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
+    <img class="modal-content" id="modal-img">
+    <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+  <script>
+    const images = [
+      "../img/mural 1.jpeg",
+      "../img/mural 2.jpeg",
+      "../img/mural 3.jpeg",
+      "../img/mural 4.jpeg",
+      "../img/mural 5.jpeg",
+      "../img/mural 6.jpeg",
+      "../img/mural 7.jpeg",
+      "../img/mural 8.jpeg",
+      "../img/mural 9.jpeg",
+      "../img/mural 10.jpeg",
+      "../img/mural 11.jpeg",
+      "../img/mural 12.jpeg",
+      "../img/mural 13.jpeg",
+      "../img/mural 14.jpeg",
+      "../img/mural 15.jpeg",
+      "../img/mural 16.jpeg"
+    ];
+    let index = 0;
+
+    function openModal(i) {
+      index = i;
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = images[index];
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function changeImage(dir) {
+      index += dir;
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      document.getElementById("modal-img").src = images[index];
+    }
+
+    window.onclick = function (e) {
+      if (e.target === document.getElementById("modal")) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+
+</html>

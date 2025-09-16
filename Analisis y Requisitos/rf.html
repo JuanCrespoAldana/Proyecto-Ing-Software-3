@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos Funcionales</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 40px auto;
+            line-height: 1.8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #1A5276;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaf2f8;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./analisis.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Requisitos Funcionales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Requisito</th>
+                        <th>Descripción</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+    <td>RF-001</td>
+    <td>Crear Perfil</td>
+    <td>Permite registrar la información de los perfiles de usuario, incluyendo CodigoPersonal, Nombre, Apellido, Rol, Cédula.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-002</td>
+    <td>Consultar Perfil</td>
+    <td>Permite consultar la información de los perfiles de usuario con CodigoPersonal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-003</td>
+    <td>Modificar Perfil</td>
+    <td>Permite modificar la información de los perfiles de usuario, utilizando CodigoPersonal a excepción del campo clave.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-004</td>
+    <td>Inhabilitar Perfil</td>
+    <td>Permite habilitar o inhabilitar un perfil, con previa confirmación y verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-005</td>
+    <td>Guardar Perfil</td>
+    <td>Permite guardar los cambios realizados en la gestión de perfiles de usuario.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-006</td>
+    <td>Cancelar Perfil</td>
+    <td>Permite cancelar el proceso actual en la gestión de perfiles y regresar al estado inicial.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-007</td>
+    <td>Salir de Perfiles</td>
+    <td>Permite cerrar el formulario de gestión de perfiles.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-008</td>
+    <td>Crear Usuario</td>
+    <td>Permite registrar la información de los usuarios, incluyendo nombre, contraseña, perfil y estado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-009</td>
+    <td>Consultar Usuario</td>
+    <td>Permite consultar la información de los usuarios por nombre y perfil.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-010</td>
+    <td>Modificar Usuario</td>
+    <td>Permite modificar la información de los usuarios, a excepción del campo clave (usuario).</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-011</td>
+    <td>Inhabilitar Usuario</td>
+    <td>Permite habilitar o inhabilitar un usuario, con previa confirmación y verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-012</td>
+    <td>Guardar Usuario</td>
+    <td>Permite guardar los cambios realizados en la gestión de usuarios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-013</td>
+    <td>Cancelar Usuario</td>
+    <td>Permite cancelar el proceso actual en la gestión de usuarios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-014</td>
+    <td>Salir de Usuarios</td>
+    <td>Permite cerrar el formulario de gestión de usuarios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-015</td>
+    <td>Crear Tipo de Pedido</td>
+    <td>Permite registrar un nuevo tipo de pedido (ejemplo: domicilio, mesa, para llevar).</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-016</td>
+    <td>Consultar Tipo de Pedido</td>
+    <td>Permite consultar la información de los tipos de pedido registrados en el sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-017</td>
+    <td>Modificar Tipo de Pedido</td>
+    <td>Permite modificar la información de un tipo de pedido.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-018</td>
+    <td>Eliminar Tipo de Pedido</td>
+    <td>Permite eliminar un tipo de pedido, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-019</td>
+    <td>Guardar Tipo de Pedido</td>
+    <td>Permite guardar los cambios realizados en la gestión de tipos de pedido.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-020</td>
+    <td>Cancelar Tipo de Pedido</td>
+    <td>Permite cancelar el proceso actual en la gestión de tipos de pedido.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-021</td>
+    <td>Salir de Tipos de Pedido</td>
+    <td>Permite cerrar el formulario de gestión de tipos de pedido.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-022</td>
+    <td>Crear Pedido</td>
+    <td>Permite registrar un nuevo pedido, incluyendo cliente, productos, cantidad y tipo de pedido.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-023</td>
+    <td>Consultar Pedido</td>
+    <td>Permite consultar el estado y detalles de un pedido por código.</td>
+    <td>Cliente, Mesero, Cajero, Cocinero</td>
+</tr>
+<tr>
+    <td>RF-024</td>
+    <td>Modificar Pedido</td>
+    <td>Permite modificar un pedido siempre y cuando no haya sido confirmado por la cocina.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-025</td>
+    <td>Eliminar Pedido</td>
+    <td>Permite eliminar un pedido pendiente, previa verificación de dependencias.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-026</td>
+    <td>Guardar Pedido</td>
+    <td>Permite guardar los cambios realizados en la gestión de pedidos.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-027</td>
+    <td>Cancelar Pedido</td>
+    <td>Permite cancelar el proceso actual de creación o modificación de un pedido.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-028</td>
+    <td>Salir de Pedidos</td>
+    <td>Permite cerrar el formulario de gestión de pedidos.</td>
+    <td>Cliente, Mesero</td>
+</tr>
+<tr>
+    <td>RF-029</td>
+    <td>Crear Tipo de Personal</td>
+    <td>Permite registrar un nuevo tipo de personal (mesero, cajero, cocinero, etc.).</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-030</td>
+    <td>Consultar Tipo de Personal</td>
+    <td>Permite consultar la información de los tipos de personal registrados.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-031</td>
+    <td>Modificar Tipo de Personal</td>
+    <td>Permite modificar la información de un tipo de personal registrado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-032</td>
+    <td>Eliminar Tipo de Personal</td>
+    <td>Permite eliminar un tipo de personal, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-033</td>
+    <td>Guardar Tipo de Personal</td>
+    <td>Permite guardar los cambios realizados en la gestión de tipos de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-034</td>
+    <td>Cancelar Tipo de Personal</td>
+    <td>Permite cancelar el proceso actual de gestión de tipos de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-035</td>
+    <td>Salir de Tipos de Personal</td>
+    <td>Permite cerrar el formulario de gestión de tipos de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-036</td>
+    <td>Crear Personal</td>
+    <td>Permite registrar la información de un nuevo empleado, incluyendo nombre, cédula, tipo de personal y estado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-037</td>
+    <td>Consultar Personal</td>
+    <td>Permite consultar la información de empleados registrados por cédula o nombre.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-038</td>
+    <td>Modificar Personal</td>
+    <td>Permite modificar los datos de un empleado registrado en el sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-039</td>
+    <td>Eliminar Personal</td>
+    <td>Permite eliminar un registro de personal, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-040</td>
+    <td>Guardar Personal</td>
+    <td>Permite guardar los cambios realizados en la gestión de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-041</td>
+    <td>Cancelar Personal</td>
+    <td>Permite cancelar el proceso actual de gestión de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-042</td>
+    <td>Salir de Personal</td>
+    <td>Permite cerrar el formulario de gestión de personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-043</td>
+    <td>Crear Cliente</td>
+    <td>Permite registrar un nuevo cliente, incluyendo datos de contacto e identificación.</td>
+    <td>Administrador, Cliente</td>
+</tr>
+<tr>
+    <td>RF-044</td>
+    <td>Consultar Cliente</td>
+    <td>Permite consultar la información de clientes registrados.</td>
+    <td>Administrador, Cliente</td>
+</tr>
+<tr>
+    <td>RF-045</td>
+    <td>Modificar Cliente</td>
+    <td>Permite modificar los datos de un cliente registrado en el sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-046</td>
+    <td>Eliminar Cliente</td>
+    <td>Permite eliminar un cliente, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-047</td>
+    <td>Guardar Cliente</td>
+    <td>Permite guardar los cambios realizados en la gestión de clientes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-048</td>
+    <td>Cancelar Cliente</td>
+    <td>Permite cancelar el proceso actual en la gestión de clientes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-049</td>
+    <td>Salir de Clientes</td>
+    <td>Permite cerrar el formulario de gestión de clientes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-050</td>
+    <td>Crear Tipo de Alimento</td>
+    <td>Permite registrar un nuevo tipo de alimento (entradas, platos fuertes, bebidas, postres).</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-051</td>
+    <td>Consultar Tipo de Alimento</td>
+    <td>Permite consultar los tipos de alimentos registrados en el sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-052</td>
+    <td>Modificar Tipo de Alimento</td>
+    <td>Permite modificar los datos de un tipo de alimento existente.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-053</td>
+    <td>Eliminar Tipo de Alimento</td>
+    <td>Permite eliminar un tipo de alimento, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-054</td>
+    <td>Guardar Tipo de Alimento</td>
+    <td>Permite guardar los cambios realizados en la gestión de tipos de alimento.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-055</td>
+    <td>Cancelar Tipo de Alimento</td>
+    <td>Permite cancelar el proceso actual en la gestión de tipos de alimento.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-056</td>
+    <td>Salir de Tipos de Alimento</td>
+    <td>Permite cerrar el formulario de gestión de tipos de alimento.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-057</td>
+    <td>Crear Alimento</td>
+    <td>Permite registrar un nuevo alimento con su respectiva información: nombre, descripción, precio, tipo y estado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-058</td>
+    <td>Consultar Alimento</td>
+    <td>Permite consultar la información de los alimentos registrados.</td>
+    <td>Administrador, Cliente</td>
+</tr>
+<tr>
+    <td>RF-059</td>
+    <td>Modificar Alimento</td>
+    <td>Permite modificar los datos de un alimento registrado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-060</td>
+    <td>Eliminar Alimento</td>
+    <td>Permite eliminar un alimento, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-061</td>
+    <td>Guardar Alimento</td>
+    <td>Permite guardar los cambios realizados en la gestión de alimentos.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-062</td>
+    <td>Cancelar Alimento</td>
+    <td>Permite cancelar el proceso actual en la gestión de alimentos.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-063</td>
+    <td>Salir de Alimentos</td>
+    <td>Permite cerrar el formulario de gestión de alimentos.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-064</td>
+    <td>Crear Tipo de Pago</td>
+    <td>Permite registrar un nuevo tipo de pago (efectivo, tarjeta, transferencia, etc.).</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-065</td>
+    <td>Consultar Tipo de Pago</td>
+    <td>Permite consultar la información de los tipos de pago registrados.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-066</td>
+    <td>Modificar Tipo de Pago</td>
+    <td>Permite modificar la información de un tipo de pago.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-067</td>
+    <td>Eliminar Tipo de Pago</td>
+    <td>Permite eliminar un tipo de pago, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-068</td>
+    <td>Guardar Tipo de Pago</td>
+    <td>Permite guardar los cambios realizados en la gestión de tipos de pago.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-069</td>
+    <td>Cancelar Tipo de Pago</td>
+    <td>Permite cancelar el proceso actual en la gestión de tipos de pago.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-070</td>
+    <td>Salir de Tipos de Pago</td>
+    <td>Permite cerrar el formulario de gestión de tipos de pago.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-071</td>
+    <td>Crear Pago</td>
+    <td>Permite registrar un pago asociado a un pedido, indicando cliente, monto, método de pago y fecha.</td>
+    <td>Cajero</td>
+</tr>
+<tr>
+    <td>RF-072</td>
+    <td>Consultar Pago</td>
+    <td>Permite consultar los pagos realizados por código de pedido o cliente.</td>
+    <td>Administrador, Cajero</td>
+</tr>
+<tr>
+    <td>RF-073</td>
+    <td>Modificar Pago</td>
+    <td>Permite modificar los datos de un pago registrado.</td>
+    <td>Cajero</td>
+</tr>
+<tr>
+    <td>RF-074</td>
+    <td>Eliminar Pago</td>
+    <td>Permite eliminar un pago registrado, previa verificación de dependencias.</td>
+    <td>Administrador, Cajero</td>
+</tr>
+<tr>
+    <td>RF-075</td>
+    <td>Guardar Pago</td>
+    <td>Permite guardar los cambios realizados en la gestión de pagos.</td>
+    <td>Cajero</td>
+</tr>
+<tr>
+    <td>RF-076</td>
+    <td>Cancelar Pago</td>
+    <td>Permite cancelar el proceso actual en la gestión de pagos.</td>
+    <td>Cajero</td>
+</tr>
+<tr>
+    <td>RF-077</td>
+    <td>Salir de Pagos</td>
+    <td>Permite cerrar el formulario de gestión de pagos.</td>
+    <td>Cajero</td>
+</tr>
+<tr>
+    <td>RF-078</td>
+    <td>Crear Domicilio</td>
+    <td>Permite registrar un nuevo domicilio, indicando dirección, cliente y pedido asociado.</td>
+    <td>Cliente, Administrador</td>
+</tr>
+<tr>
+    <td>RF-079</td>
+    <td>Consultar Domicilio</td>
+    <td>Permite consultar la información de los domicilios registrados.</td>
+    <td>Administrador, Cliente</td>
+</tr>
+<tr>
+    <td>RF-080</td>
+    <td>Modificar Domicilio</td>
+    <td>Permite modificar los datos de un domicilio registrado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-081</td>
+    <td>Eliminar Domicilio</td>
+    <td>Permite eliminar un domicilio, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-082</td>
+    <td>Guardar Domicilio</td>
+    <td>Permite guardar los cambios realizados en la gestión de domicilios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-083</td>
+    <td>Cancelar Domicilio</td>
+    <td>Permite cancelar el proceso actual en la gestión de domicilios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-084</td>
+    <td>Salir de Domicilios</td>
+    <td>Permite cerrar el formulario de gestión de domicilios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-085</td>
+    <td>Crear Sede</td>
+    <td>Permite registrar una nueva sede del restaurante, indicando dirección, capacidad y horarios.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-086</td>
+    <td>Consultar Sede</td>
+    <td>Permite consultar la información de las sedes registradas.</td>
+    <td>Administrador, Cliente</td>
+</tr>
+<tr>
+    <td>RF-087</td>
+    <td>Modificar Sede</td>
+    <td>Permite modificar la información de una sede registrada.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-088</td>
+    <td>Eliminar Sede</td>
+    <td>Permite eliminar una sede, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-089</td>
+    <td>Guardar Sede</td>
+    <td>Permite guardar los cambios realizados en la gestión de sedes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-090</td>
+    <td>Cancelar Sede</td>
+    <td>Permite cancelar el proceso actual en la gestión de sedes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-091</td>
+    <td>Salir de Sedes</td>
+    <td>Permite cerrar el formulario de gestión de sedes.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-092</td>
+    <td>Crear Ciudad</td>
+    <td>Permite registrar una nueva ciudad en la base de datos del sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-093</td>
+    <td>Consultar Ciudad</td>
+    <td>Permite consultar la información de las ciudades registradas.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-094</td>
+    <td>Modificar Ciudad</td>
+    <td>Permite modificar la información de una ciudad registrada.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-095</td>
+    <td>Eliminar Ciudad</td>
+    <td>Permite eliminar una ciudad, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-096</td>
+    <td>Guardar Ciudad</td>
+    <td>Permite guardar los cambios realizados en la gestión de ciudades.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-097</td>
+    <td>Cancelar Ciudad</td>
+    <td>Permite cancelar el proceso actual en la gestión de ciudades.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-098</td>
+    <td>Salir de Ciudades</td>
+    <td>Permite cerrar el formulario de gestión de ciudades.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-099</td>
+    <td>Crear País</td>
+    <td>Permite registrar un nuevo país en la base de datos del sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-100</td>
+    <td>Consultar País</td>
+    <td>Permite consultar la información de los países registrados.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-101</td>
+    <td>Modificar País</td>
+    <td>Permite modificar la información de un país registrado.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-102</td>
+    <td>Eliminar País</td>
+    <td>Permite eliminar un país, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-103</td>
+    <td>Guardar País</td>
+    <td>Permite guardar los cambios realizados en la gestión de países.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-104</td>
+    <td>Cancelar País</td>
+    <td>Permite cancelar el proceso actual en la gestión de países.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-105</td>
+    <td>Salir de Países</td>
+    <td>Permite cerrar el formulario de gestión de países.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-106</td>
+    <td>Crear Mesa</td>
+    <td>Permite registrar una nueva mesa en la base de datos del sistema.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-107</td>
+    <td>Consultar Mesa</td>
+    <td>Permite consultar la información de las mesas registradas.</td>
+    <td>Administrador, Mesero</td>
+</tr>
+<tr>
+    <td>RF-108</td>
+    <td>Modificar Mesa</td>
+    <td>Permite modificar la información de una mesa registrada.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-109</td>
+    <td>Eliminar Mesa</td>
+    <td>Permite eliminar una mesa, previa verificación de dependencias.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-110</td>
+    <td>Guardar Mesa</td>
+    <td>Permite guardar los cambios realizados en la gestión de mesas.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-111</td>
+    <td>Cancelar Mesa</td>
+    <td>Permite cancelar el proceso actual en la gestión de mesas.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-112</td>
+    <td>Salir de Mesas</td>
+    <td>Permite cerrar el formulario de gestión de mesas.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-113</td>
+    <td>Monitoreo de Pedidos</td>
+    <td>Permite al administrador y al personal autorizado realizar un seguimiento en tiempo real del estado de los pedidos.</td>
+    <td>Administrador, Mesero, Cocinero</td>
+</tr>
+<tr>
+    <td>RF-114</td>
+    <td>Generación de Informes</td>
+    <td>Permite generar informes sobre ventas, pedidos, clientes y desempeño del personal.</td>
+    <td>Administrador</td>
+</tr>
+<tr>
+    <td>RF-115</td>
+    <td>Consultas Personalizadas</td>
+    <td>Permite realizar consultas sobre la información registrada en el sistema mediante filtros personalizados.</td>
+    <td>Administrador, Cajero</td>
+</tr>
+<tr>
+    <td>RF-116</td>
+    <td>Reportes de Operaciones</td>
+    <td>Permite generar reportes sobre operaciones del restaurante para análisis y toma de decisiones.</td>
+    <td>Administrador</td>
+</tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+</html>

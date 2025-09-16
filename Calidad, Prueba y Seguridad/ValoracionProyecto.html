@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Contenedor Central</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .contenedor-central {
+            background: #ffffff;
+            /* Fondo blanco para mejor contraste */
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            /* Mejor para bloques de texto */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 1100px;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 40px auto;
+            line-height: 1.8;
+            /* Más espacio entre líneas */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        /* Encabezados */
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        /* Subtítulos en negrita */
+        .contenedor-central p strong {
+            font-size: 1.2rem;
+            color: #34495e;
+            display: block;
+            margin: 25px 0 10px 0;
+        }
+
+        /* Listas */
+        .contenedor-central ul {
+            margin: 0 0 20px 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .contenedor-central ul li {
+            background: #f4f6f7;
+            margin: 8px 0;
+            padding: 12px 18px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .contenedor-central ul li:hover {
+            transform: translateX(5px);
+            background: #eaf2f8;
+        }
+
+        /* Imágenes si las usas */
+        .contenedor-central img {
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./calidad.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Valoración del Proyecto</h2>
+
+            <p><strong>Valoración Económica</strong></p>
+            <ul>
+                <li>Reducción de costos operativos al disminuir la necesidad de meseros para la toma de pedidos.</li>
+                <li>Incremento en la rotación de mesas y eficiencia en el servicio, lo que puede traducirse en mayores
+                    ingresos.</li>
+            </ul>
+
+            <p><strong>Valoración Técnica</strong></p>
+            <ul>
+                <li>El sistema es escalable, permitiendo la integración de nuevas funcionalidades como reportes de
+                    ventas o pasarelas de pago.</li>
+                <li>La arquitectura en PHP, MySQL y HTML/JavaScript asegura compatibilidad con navegadores y
+                    dispositivos móviles.</li>
+            </ul>
+
+            <p><strong>Valoración Operativa</strong></p>
+            <ul>
+                <li>Optimiza la comunicación entre cliente y cocina, reduciendo errores en los pedidos.</li>
+                <li>Ofrece mayor autonomía y rapidez en la experiencia del cliente al realizar sus pedidos.</li>
+            </ul>
+
+            <p><strong>Valoración Social y Académica</strong></p>
+            <ul>
+                <li>Contribuye a la innovación en el sector gastronómico al incorporar soluciones digitales accesibles.
+                </li>
+                <li>Sirve como evidencia académica de la aplicación de Programación Orientada a Objetos, diseño de bases
+                    de datos y gestión de proyectos.</li>
+            </ul>
+
+            <p><strong>Conclusión</strong></p>
+            <p>
+                QuickOrder es un proyecto viable y sostenible que responde a una necesidad real del mercado.
+                Su implementación mejora la eficiencia, la experiencia del cliente y el control interno del restaurante,
+                consolidándose como una propuesta que combina beneficios tecnológicos, económicos y sociales.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+</body>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+</html>
