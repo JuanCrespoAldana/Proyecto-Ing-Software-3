@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escenarios de Casos de Uso</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { background:#f0f2f5; margin:0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#2C3E50; }
+        header { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:#1A5276; color:white; }
+        header img { height:50px; }
+        .titulo { font-size:1.8rem; }
+        .acciones a { color:white; margin-left:15px; font-size:1.2rem; }
+        .contenedor-central { background:#fff; padding:40px; border-radius:20px; text-align:left; box-shadow:0 8px 30px rgba(0,0,0,0.12); width:90%; max-width:1100px; min-height:70vh; margin:40px auto; line-height:1.8; }
+        .contenedor-central h2 { font-size:2rem; font-weight:bold; color:#1A5276; margin-bottom:25px; border-bottom:3px solid #3498db; padding-bottom:10px; text-align:center; }
+        .contenedor-central h3 { margin-top:30px; font-size:1.5rem; color:#34495e; }
+        table { width:100%; border-collapse:collapse; margin:20px 0; background:#f9f9f9; border-radius:12px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+        th { background:#1A5276; color:white; padding:12px; text-align:left; width:25%; }
+        td { padding:12px; border-bottom:1px solid #ddd; }
+        tr:last-child td { border-bottom:none; }
+        .subtabla { width:100%; border-collapse:collapse; margin-top:10px; }
+        .subtabla th { background:#3498db; color:white; padding:8px; text-align:center; }
+        .subtabla td { padding:8px; border:1px solid #ddd; }
+        footer { text-align:center; padding:15px; background:#1A5276; color:white; margin-top:30px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo"><img src="../img/logo_uni.png" alt="Logo"></div>
+    <h1 class="titulo">Ingeniería de Software 3</h1>
+    <div class="acciones">
+        <a href="modelo.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+    </div>
+</header>
+
+<main>
+    <div class="contenedor-central">
+        <h2>Escenarios de Casos de Uso</h2>
+
+        <!-- Escenario 1 -->
+        <h3>Escenario 1: Crear Perfil</h3>
+        <table>
+            <tr><th>Nombre</th><td>Crear Perfil</td></tr>
+            <tr><th>Descripción</th><td>Permite registrar la información de los perfiles de usuario.</td></tr>
+            <tr><th>Actor</th><td>Administrador</td></tr>
+            <tr><th>Precondiciones</th><td>El administrador debe estar autenticado.</td></tr>
+            <tr><th>Flujo Básico</th>
+                <td>
+                    <table class="subtabla">
+                        <tr><th>Actor</th><th>Sistema</th></tr>
+                        <tr><td>1. Ingresa al módulo de gestión de usuarios</td><td>2. Despliega formulario vacío</td></tr>
+                        <tr><td>3. Llena los campos obligatorios</td><td>4. Valida los datos ingresados</td></tr>
+                        <tr><td>5. Clic en Guardar</td><td>6. Confirma y guarda el perfil</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Escenario 2 -->
+        <h3>Escenario 2: Iniciar Sesión</h3>
+        <table>
+            <tr><th>Nombre</th><td>Iniciar Sesión</td></tr>
+            <tr><th>Descripción</th><td>Permite a los usuarios autenticarse en el sistema.</td></tr>
+            <tr><th>Actor</th><td>Usuario</td></tr>
+            <tr><th>Precondiciones</th><td>El usuario debe estar registrado previamente.</td></tr>
+            <tr><th>Flujo Básico</th>
+                <td>
+                    <table class="subtabla">
+                        <tr><th>Actor</th><th>Sistema</th></tr>
+                        <tr><td>1. Ingresa correo y contraseña</td><td>2. Valida credenciales</td></tr>
+                        <tr><td>3. Presiona Ingresar</td><td>4. Redirige al panel según rol</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Escenario 3 -->
+        <h3>Escenario 3: Realizar Pedido</h3>
+        <table>
+            <tr><th>Nombre</th><td>Realizar Pedido</td></tr>
+            <tr><th>Descripción</th><td>El cliente selecciona productos para generar un pedido.</td></tr>
+            <tr><th>Actor</th><td>Cliente</td></tr>
+            <tr><th>Precondiciones</th><td>Debe tener productos en el carrito.</td></tr>
+            <tr><th>Flujo Básico</th>
+                <td>
+                    <table class="subtabla">
+                        <tr><th>Actor</th><th>Sistema</th></tr>
+                        <tr><td>1. Selecciona productos</td><td>2. Calcula subtotal</td></tr>
+                        <tr><td>3. Confirma el pedido</td><td>4. Registra pedido y genera ID</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Escenario 4 -->
+        <h3>Escenario 4: Registrar Pago</h3>
+        <table>
+            <tr><th>Nombre</th><td>Registrar Pago</td></tr>
+            <tr><th>Descripción</th><td>Permite al cliente realizar el pago de un pedido.</td></tr>
+            <tr><th>Actor</th><td>Cliente</td></tr>
+            <tr><th>Precondiciones</th><td>Debe existir un pedido pendiente de pago.</td></tr>
+            <tr><th>Flujo Básico</th>
+                <td>
+                    <table class="subtabla">
+                        <tr><th>Actor</th><th>Sistema</th></tr>
+                        <tr><td>1. Selecciona método de pago</td><td>2. Procesa la transacción</td></tr>
+                        <tr><td>3. Confirma el pago</td><td>4. Genera comprobante</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Escenario 5 -->
+        <h3>Escenario 5: Generar Reporte</h3>
+        <table>
+            <tr><th>Nombre</th><td>Generar Reporte</td></tr>
+            <tr><th>Descripción</th><td>El administrador obtiene reportes de ventas o usuarios.</td></tr>
+            <tr><th>Actor</th><td>Administrador</td></tr>
+            <tr><th>Precondiciones</th><td>Debe tener acceso al módulo de reportes.</td></tr>
+            <tr><th>Flujo Básico</th>
+                <td>
+                    <table class="subtabla">
+                        <tr><th>Actor</th><th>Sistema</th></tr>
+                        <tr><td>1. Selecciona tipo de reporte</td><td>2. Genera reporte solicitado</td></tr>
+                        <tr><td>3. Descarga o visualiza</td><td>4. Exporta a PDF/Excel</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Universidad — Ingeniería de Software 3</p>
+</footer>
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+</html>
