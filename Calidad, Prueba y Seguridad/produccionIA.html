@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURPS vs ISO 25010</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            margin: 40px auto;
+            line-height: 1.8;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.4rem;
+            color: #1A5276;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        video {
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            height: 620px;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .acciones a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="./ISO25010.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>FURPS vs ISO 25010</h2>
+
+            <img src="../img/Furps VS iso25010.png" alt="VS">
+
+            <h3 class="subtitulo">Modelo FURPS</h3>
+            <p>
+                El modelo <strong>FURPS</strong> (Functionality, Usability, Reliability, Performance y Supportability)
+                fue desarrollado por Hewlett-Packard y sirve para clasificar los requisitos de software en
+                categorías funcionales y no funcionales. Este modelo ayuda a establecer criterios de calidad
+                centrados en el rendimiento, la usabilidad, la confiabilidad y la capacidad de soporte del sistema.
+            </p>
+
+            <h3 class="subtitulo">Norma ISO/IEC 25010</h3>
+            <p>
+                La norma <strong>ISO/IEC 25010</strong> define un modelo de calidad del software compuesto por
+                características y subcaracterísticas que permiten evaluar la calidad de un producto o sistema.
+                Incluye aspectos como la seguridad, la mantenibilidad, la portabilidad y la compatibilidad, con el
+                objetivo de garantizar que el software cumpla con las necesidades del usuario y los estándares
+                internacionales.
+            </p>
+
+            <video src="../videos/FURPS vs ISO25010.mp4" controls></video>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

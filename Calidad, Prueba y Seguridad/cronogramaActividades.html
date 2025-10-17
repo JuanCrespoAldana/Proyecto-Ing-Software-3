@@ -4,43 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Contenedor Central</title>
+    <title>Cronograma de Actividades</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .contenedor-central {
-            background: #ecf0f1;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
         }
 
         .contenedor-central {
-            background: #ecf0f1;
-            padding: 40px;
+            background: #ffffff;
+            padding: 50px;
             border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin: 40px auto;
+            line-height: 1.8;
         }
 
         .contenedor-central h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: bold;
-            color: #2C3E50;
-            margin-bottom: 30px;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #3b80ad;
+            padding-bottom: 10px;
         }
 
-        .contenedor-central img {
-            max-width: 650px;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fdfdfd;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #1A5276;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background-color: #ecf0f1;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .observacion {
+            text-align: left;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
+        }
+
     </style>
 </head>
 
@@ -51,7 +107,7 @@
         </div>
         <h1 class="titulo">Ingeniería de Software 3</h1>
         <div class="acciones">
-            <a href="calidad.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="./calidad.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
             <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
         </div>
     </header>
@@ -59,15 +115,93 @@
     <main>
         <div class="contenedor-central">
             <h2>Cronograma de Actividades</h2>
-            <img src="../img/Cronograma.png" alt="Imagen Ejemplo">
+
+            <table>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Fecha Inic.</th>
+                    <th>Fecha Final</th>
+                    <th>T.E</th>
+                    <th>T.R</th>
+                    <th>Responsable</th>
+                    <th>Recursos</th>
+                    <th>Observación</th>
+                </tr>
+
+                <tr>
+                    <td>Buscar la empresa donde se realizará el proyecto</td>
+                    <td>10/08/24</td>
+                    <td>24/08/24</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Internet</td>
+                    <td class="observacion">Se realizará en un restaurante local.</td>
+                </tr>
+
+                <tr>
+                    <td>Diseño de la encuesta</td>
+                    <td>24/08/24</td>
+                    <td>31/08/24</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Portátil y Internet</td>
+                    <td class="observacion">Crear preguntas relevantes para los usuarios.</td>
+                </tr>
+
+                <tr>
+                    <td>Aplicación de encuesta</td>
+                    <td>31/08/24</td>
+                    <td>07/09/24</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Microsoft Forms</td>
+                    <td class="observacion">Recoger datos en restaurantes seleccionados.</td>
+                </tr>
+
+                <tr>
+                    <td>Análisis de encuesta</td>
+                    <td>07/09/24</td>
+                    <td>14/09/24</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Microsoft Forms</td>
+                    <td class="observacion">Identificar necesidades y patrones en los datos.</td>
+                </tr>
+
+                <tr>
+                    <td>Definición del problema</td>
+                    <td>14/09/24</td>
+                    <td>28/09/24</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Documentación</td>
+                    <td class="observacion">Redactar el problema a resolver.</td>
+                </tr>
+
+                <tr>
+                    <td>Justificación del problema</td>
+                    <td>28/09/24</td>
+                    <td>19/09/24</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>Juan Jose Crespo y Mateo Galeano</td>
+                    <td>Documentación</td>
+                    <td class="observacion">Establecer la relevancia del problema.</td>
+                </tr>
+            </table>
         </div>
     </main>
 
     <footer>
         <p>© 2025 Universidad — Ingeniería de Software 3</p>
     </footer>
-</body>
 
-<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
 
 </html>

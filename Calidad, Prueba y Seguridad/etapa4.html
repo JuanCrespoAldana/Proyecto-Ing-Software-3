@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etapa 4</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            margin: 40px auto;
+            line-height: 1.8;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f6f7;
+        }
+
+        video {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .acciones a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="itil.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Protocolos de Crisis</h2>
+
+            <table class="tabla-crisis">
+                <thead>
+                    <tr>
+                        <th>Escenario de Crisis</th>
+                        <th>Procedimiento</th>
+                        <th>Duración (SLA)</th>
+                        <th>Canal de Comunicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-escenario"><strong>Caída del software<br>(portal no carga)</strong></td>
+                        <td class="col-procedimiento">
+                            Comunicar al equipo TI mediante la línea de atención publicada en la página.
+                        </td>
+                        <td class="col-sla">2 horas</td>
+                        <td class="col-canal">Mensaje en la página principal</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-escenario"><strong>Error en inicio de sesión<br>(usuario no entra)</strong></td>
+                        <td class="col-procedimiento">
+                            Usuario solicita ayuda mediante el formulario de soporte. Equipo TI valida credenciales y
+                            restablece.
+                        </td>
+                        <td class="col-sla">1 hora</td>
+                        <td class="col-canal">Notificación en portal / Correo usuario</td>
+                    </tr>
+
+                    <tr>
+                        <td class="col-escenario"><strong>Error en recuperación<br>de contraseña</strong></td>
+                        <td class="col-procedimiento">
+                            Usuario reporta el error a través del número de atención, luego el equipo TI valida el
+                            correo en la base de datos.
+                        </td>
+                        <td class="col-sla">2 horas</td>
+                        <td class="col-canal">Mensaje en panel de administración</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <video src="../videos/Protocolos de crisis Video.mp4" controls></video>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

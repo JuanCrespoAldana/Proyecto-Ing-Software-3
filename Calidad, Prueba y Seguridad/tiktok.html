@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riesgo de Producto</title>
+    <title>ISO 25010 + FURPS</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
         body {
@@ -29,8 +29,8 @@
             border-radius: 20px;
             text-align: left;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            width: 90%;
-            max-width: 1100px;
+            width: 95%;
+            max-width: 1200px;
             min-height: 70vh;
             margin: 40px auto;
             line-height: 1.8;
@@ -42,41 +42,42 @@
             color: #1A5276;
             margin-bottom: 25px;
             text-align: center;
-            border-bottom: 3px solid #3b80ad;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
         }
 
-        table {
+        .subtitulo {
+            font-size: 1.4rem;
+            color: #1A5276;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            text-align: justify;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        img {
             width: 100%;
-            border-collapse: collapse;
-            background-color: #fdfdfd;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
-        th,
-        td {
-            padding: 12px 15px;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        th {
-            background-color: #1A5276;
-            color: white;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-
-        tr:hover {
-            background-color: #ecf0f1;
-        }
-
-        td:first-child {
-            text-align: left;
-            font-weight: 500;
+        video {
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            height: 620px;
+            object-fit: cover;
         }
 
         footer {
@@ -107,37 +108,33 @@
         </div>
         <h1 class="titulo">Ingeniería de Software 3</h1>
         <div class="acciones">
-            <a href="./analisisDeRiesgos.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="./ISO25010.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
             <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
         </div>
     </header>
 
     <main>
         <div class="contenedor-central">
-            <h2>Riesgo de Producto</h2>
+            <h2>ISO 25010 + FURPS</h2>
 
-            <table>
-                <tr>
-                    <th>Riesgo</th>
-                    <th>Descripción</th>
-                    <th>Acción</th>
-                </tr>
-                <tr>
-                    <td>Errores en el software</td>
-                    <td>Alto</td>
-                    <td>Realizar pruebas exhaustivas antes de la implementación.</td>
-                </tr>
-                <tr>
-                    <td>Falta de funcionalidades clave</td>
-                    <td>Alto</td>
-                    <td>Revisar y validar requisitos de manera continua durante el desarrollo.</td>
-                </tr>
-                <tr>
-                    <td>Cambios en los requerimientos del cliente</td>
-                    <td>Medio</td>
-                    <td>Mantener una comunicación constante con los interesados para ajustar los requisitos oportunamente.</td>
-                </tr>
-            </table>
+
+            <h3 class="subtitulo">TikTok</h3>
+            <p>
+                Cada piso representa la fusión de una característica de <strong>ISO 25010</strong> con una categoría de
+                <strong>FURPS</strong>.
+                Los grupos deben crear un <strong>TikTok</strong> o <strong>Reel</strong> mostrando su aprendizaje.
+            </p>
+
+            <ul>
+                <li><strong>PISO 1:</strong> Funcionalidad + Functionality</li>
+                <li><strong>PISO 2:</strong> Usabilidad + Usability</li>
+                <li><strong>PISO 3:</strong> Confiabilidad + Reliability</li>
+                <li><strong>PISO 4:</strong> Eficiencia + Performance</li>
+                <li><strong>PISO 5:</strong> Seguridad + Supportability</li>
+                <li><strong>PISO 6:</strong> Portabilidad + Compatibilidad</li>
+            </ul>
+
+            <video src="../videos/ISO 25010 + FURPS.mp4" controls></video>
         </div>
     </main>
 

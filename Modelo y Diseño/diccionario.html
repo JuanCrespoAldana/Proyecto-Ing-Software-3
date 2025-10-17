@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Clases</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #2C3E50;
+            color: white;
+        }
+
+        header img { height: 50px; }
+
+        .titulo { font-size: 1.8rem; }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 1100px;
+            min-height: 70vh;
+            margin: 40px auto;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9f9f9;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center; /* Centrado horizontal */
+            vertical-align: middle; /* Centrado vertical */
+            border: 1px solid #ddd;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            font-size: 1rem;
+        }
+
+        tr:nth-child(even) { background-color: #f2f2f2; }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1A5276;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="../img/logo_uni.png" alt="Logo"></div>
+    <h1 class="titulo">Ingeniería de Software 3</h1>
+    <div class="acciones">
+        <a href="modelo.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+    </div>
+</header>
+
+<main>
+    <div class="contenedor-central">
+        <h2>Diccionario de Clases</h2>
+
+        <table>
+            <tr>
+                <th>Clase</th>
+                <th>Atributos</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td>Usuario</td>
+                <td>idUsuario, nombre, correo, contraseña, rol</td>
+                <td>Entidad base de los actores del sistema.</td>
+            </tr>
+            <tr>
+                <td>Administrador</td>
+                <td>Hereda de Usuario</td>
+                <td>Gestión de productos, pedidos y usuarios.</td>
+            </tr>
+            <tr>
+                <td>Cliente</td>
+                <td>Hereda de Usuario</td>
+                <td>Realiza pedidos y pagos.</td>
+            </tr>
+            <tr>
+                <td>Producto</td>
+                <td>idProducto, nombre, descripción, precio, stock</td>
+                <td>Elemento del menú disponible para los clientes.</td>
+            </tr>
+            <tr>
+                <td>Pedido</td>
+                <td>idPedido, fecha, estado, total, idCliente</td>
+                <td>Orden realizada por un cliente con productos seleccionados.</td>
+            </tr>
+            <tr>
+                <td>DetallePedido</td>
+                <td>idDetalle, cantidad, subtotal, idPedido, idProducto</td>
+                <td>Detalle de productos asociados a un pedido.</td>
+            </tr>
+            <tr>
+                <td>Carrito</td>
+                <td>idCarrito, idCliente, listaProductos</td>
+                <td>Espacio temporal donde el cliente agrega productos antes de confirmar.</td>
+            </tr>
+            <tr>
+                <td>Pago</td>
+                <td>idPago, monto, fecha, metodo, idPedido</td>
+                <td>Registra la transacción de un pedido.</td>
+            </tr>
+            <tr>
+                <td>Reporte</td>
+                <td>idReporte, tipo, fechaGeneracion, datos</td>
+                <td>Informe generado por el administrador.</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Universidad — Ingeniería de Software 3</p>
+</footer>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+</html>

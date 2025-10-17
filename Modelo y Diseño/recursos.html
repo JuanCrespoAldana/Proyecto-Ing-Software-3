@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos del Proyecto</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #2C3E50;
+            color: white;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        .titulo {
+            font-size: 1.8rem;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 1000px;
+            min-height: 70vh;
+            margin: 40px auto;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #1A5276;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1A5276;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="../img/logo_uni.png" alt="Logo"></div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="modelo.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Recursos del Proyecto</h2>
+
+            <!-- Recurso Humano -->
+            <h3>Recurso Humano</h3>
+            <table>
+                <tr>
+                    <th>Rol</th>
+                    <th>Cantidad</th>
+                </tr>
+                <tr>
+                    <td>Líder de Proyecto</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Desarrolladores Backend</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Desarrolladores Frontend</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Diseñador UI/UX</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Tester QA</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+            <!-- Recursos Tecnológicos -->
+            <h3>Recursos Tecnológicos</h3>
+            <table>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Descripción / Uso</th>
+                </tr>
+                <tr>
+                    <td>Servidor Apache con PHP 8</td>
+                    <td>Entorno de ejecución para el backend del sistema.</td>
+                </tr>
+                <tr>
+                    <td>Base de datos MySQL</td>
+                    <td>Gestión de los datos del sistema.</td>
+                </tr>
+                <tr>
+                    <td>XAMPP</td>
+                    <td>Entorno local de desarrollo.</td>
+                </tr>
+                <tr>
+                    <td>Visual Studio Code</td>
+                    <td>Editor de código principal.</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>Control de versiones y trabajo colaborativo.</td>
+                </tr>
+            </table>
+
+            <!-- Recursos Materiales -->
+            <h3>Recursos Materiales</h3>
+            <table>
+                <tr>
+                    <th>Recurso</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>Laptops con mínimo 8GB RAM</td>
+                    <td>Equipos utilizados por los desarrolladores.</td>
+                </tr>
+                <tr>
+                    <td>Acceso a Internet</td>
+                    <td>Conectividad necesaria para el desarrollo colaborativo.</td>
+                </tr>
+                <tr>
+                    <td>Manuales y Documentación</td>
+                    <td>Guías técnicas y de usuario para soporte del proyecto.</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

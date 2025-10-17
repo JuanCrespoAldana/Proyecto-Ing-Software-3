@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETAPA 3</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            margin: 40px auto;
+            line-height: 1.8;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f6f7;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        /* ===== Imagen normal ===== */
+        .imagen-zoom {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-zoom:hover {
+            transform: scale(1.02);
+        }
+
+        /* ===== Modal (fondo oscuro) ===== */
+        /* ===== Modal (fondo oscuro y ajuste correcto) ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 40px;
+            /* espacio superior para la "X" */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            /* permite scroll si la imagen supera la pantalla */
+        }
+
+        /* imagen dentro del modal: se encaja dentro de la ventana sin recorte */
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 95%;
+            /* ocupa hasta el 95% del ancho disponible */
+            max-height: 85vh;
+            /* nunca será más alta del 85% de la ventana */
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            animation: zoomIn 0.28s ease;
+            object-fit: contain;
+            /* mantiene proporción y evita recortes */
+        }
+
+        /* animación */
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.96);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* botón cerrar */
+        .cerrar {
+            position: absolute;
+            top: 18px;
+            right: 28px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .cerrar:hover {
+            color: #3498db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .acciones a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="itil.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+            <h2>Catalogo de Servicios</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID del Servicio</th>
+                        <th>Nombre del Servicio</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th>Proceso de Solicitud</th>
+                        <th>Tiempo Respuesta (SLA)</th>
+                        <th>Prioridad</th>
+                        <th>Responsable</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SERV-001</td>
+                        <td>Registro de Usuario</td>
+                        <td>Permite a nuevos usuarios registrarse en la plataforma con sus datos.</td>
+                        <td>Técnico</td>
+                        <td>Formulario web</td>
+                        <td>24&nbsp;h</td>
+                        <td>Alta</td>
+                        <td>Equipo TI</td>
+                    </tr>
+                    <tr>
+                        <td>SERV-002</td>
+                        <td>Inicio de Sesión</td>
+                        <td>Login seguro para clientes y administradores del sistema.</td>
+                        <td>Técnico</td>
+                        <td>Formulario web</td>
+                        <td>24&nbsp;h</td>
+                        <td>Alta</td>
+                        <td>Equipo TI</td>
+                    </tr>
+                    <tr>
+                        <td>SERV-003</td>
+                        <td>Recuperación de Contraseña</td>
+                        <td>Restablecer credenciales de acceso mediante correo electrónico.</td>
+                        <td>Técnico</td>
+                        <td>Formulario web (correo de recuperación)</td>
+                        <td>2&nbsp;horas</td>
+                        <td>Alta</td>
+                        <td>Equipo TI</td>
+                    </tr>
+                    <tr>
+                        <td>SERV-004</td>
+                        <td>Gestión de Platillos</td>
+                        <td>Agregar, modificar y eliminar platillos desde el panel de administración.</td>
+                        <td>Técnico</td>
+                        <td>Panel de administración</td>
+                        <td>2&nbsp;horas</td>
+                        <td>Media</td>
+                        <td>Administrador</td>
+                    </tr>
+                    <tr>
+                        <td>SERV-005</td>
+                        <td>Cambio de Interfaz (Claro/Oscuro)</td>
+                        <td>Permite al usuario cambiar el diseño de la interfaz entre modo claro y oscuro.</td>
+                        <td>Interfaz/Usabilidad</td>
+                        <td>Configuración en la interfaz</td>
+                        <td>Inmediato</td>
+                        <td>Baja</td>
+                        <td>Administrador/Usuarios</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Mapeo de Flujos de Valor</h2>
+            <p style="padding: 20px;">
+                QuickOrder es una pagina web diseñada para permitir a personas realizar pedidos de forma digital,
+                describiremos gráficamente todo el proceso en un diagrama de flujos de valor desde que el cliente entra
+                a la pagina y termina cuando recibe su pedido.
+            </p>
+
+
+            <h3>Etapas del Proceso</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Etapa</th>
+                        <th>Descripción</th>
+                        <th>Actor principal</th>
+                        <th>Acción Sistema</th>
+                        <th>Tiempo respuesta página</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acceso al portal</td>
+                        <td>El cliente ingresa al sitio web Quick Order y intenta hacer un pedido</td>
+                        <td>Cliente</td>
+                        <td>Enviar al módulo de Iniciar Sesión</td>
+                        <td>&lt;5s</td>
+                    </tr>
+                    <tr>
+                        <td>Iniciar Sesión</td>
+                        <td>El cliente ingresa Usuario y contraseña</td>
+                        <td>Cliente</td>
+                        <td>
+                            Validar usuario:<br>
+                            Sí: Iniciar Sesión<br>
+                            No: Enviar al módulo de registrarse<br><br>
+                            Validar contraseña:<br>
+                            Sí: Iniciar Sesión<br>
+                            No: Enviar al módulo de cambiar contraseña
+                        </td>
+                        <td>&lt;5s</td>
+                    </tr>
+                    <tr>
+                        <td>Recuperar Contraseña</td>
+                        <td>El cliente ingresa el correo registrado</td>
+                        <td>Cliente</td>
+                        <td>
+                            Enviar código al correo y validar<br>
+                            Sí: Cambiar contraseña<br>
+                            No: Mensaje de error
+                        </td>
+                        <td>&lt;1min</td>
+                    </tr>
+                    <tr>
+                        <td>Registrar Usuario</td>
+                        <td>El cliente ingresa los datos para el registro</td>
+                        <td>Cliente</td>
+                        <td>
+                            Validar condiciones:<br>
+                            Sí: Crear usuario
+                        </td>
+                        <td>&lt;5s</td>
+                    </tr>
+                    <tr>
+                        <td>Selección del producto/pedido</td>
+                        <td>El cliente navega en Quick Order y elige producto(s)</td>
+                        <td>Cliente</td>
+                        <td>
+                            Mostrar productos, precios y añadir al carrito<br>
+                            No: Mensaje de ayuda
+                        </td>
+                        <td>&lt;5s</td>
+                    </tr>
+                    <tr>
+                        <td>Confirmación del pedido</td>
+                        <td>El cliente confirma</td>
+                        <td>Cliente</td>
+                        <td>Almacenar pedido en base de datos y enviar a cocina</td>
+                        <td>&lt;30s</td>
+                    </tr>
+                    <tr>
+                        <td>Preparación del pedido</td>
+                        <td>El personal de cocina recibe la orden y la prepara</td>
+                        <td>Empleado/Cocina</td>
+                        <td>
+                            Mostrar estado de pedido (Pendiente → En proceso → Entregado)
+                        </td>
+                        <td>Automático N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Entrega del pedido</td>
+                        <td>El cliente recibe su pedido (Presencial o domicilio)</td>
+                        <td>Repartidor/Cliente</td>
+                        <td>Muestra el estado del proceso</td>
+                        <td>Automático N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Retroalimentación/PQRSD</td>
+                        <td>El cliente puede dejar una sugerencia, opción u queja sobre el servicio</td>
+                        <td>Cliente</td>
+                        <td>Formulario PQRSD</td>
+                        <td>&lt;3min</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Puntos Críticos Identificados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Punto crítico</th>
+                        <th>Descripción</th>
+                        <th>Impacto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demora en preparación</td>
+                        <td>Los pedidos pueden acumularse en la cocina generando retrasos</td>
+                        <td>Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Errores en pedidos</td>
+                        <td>Pedido equivocado o incompleto</td>
+                        <td>Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Tiempos de entrega variables</td>
+                        <td>No se controlan las demoras en el reparto</td>
+                        <td>Alto</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Métricas Propuestas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Descripción</th>
+                        <th>Fórmula</th>
+                        <th>Frecuencia</th>
+                        <th>Objetivo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiempo promedio de preparación</td>
+                        <td>Mide la eficiencia en la cocina</td>
+                        <td>Tiempo de preparación (Σ/𝑛)</td>
+                        <td>Diario</td>
+                        <td>&lt;20min</td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de pedidos entregados a tiempo</td>
+                        <td>Evalúa cumplimiento de tiempo</td>
+                        <td>(Pedidos entregados a tiempo / pedidos totales) * 100</td>
+                        <td>Diario</td>
+                        <td>&gt;90%</td>
+                    </tr>
+                    <tr>
+                        <td>Tasa de errores de pedidos</td>
+                        <td>Cuantos pedidos presentan errores</td>
+                        <td>(Pedidos con errores / Totales) * 100</td>
+                        <td>Semanal</td>
+                        <td>&lt;3%</td>
+                    </tr>
+                    <tr>
+                        <td>Índice de satisfacción del cliente (PQRSD)</td>
+                        <td>Basado en sugerencias o quejas</td>
+                        <td>(Sugerencias positivas / Total de respuestas) * 100</td>
+                        <td>Mensual</td>
+                        <td>&gt;85%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Diagrama de flujos de valor desde que un cliente solicita el servicio y lo recibe</h3>
+            <img src="../img/DiagramaFlujo.png" alt="Mapa" class="imagen-zoom" id="imgMapa">
+        </div>
+
+    </main>
+
+    <!-- Modal para zoom -->
+    <div id="modalZoom" class="modal">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <img class="modal-content" id="imagenAmpliada">
+    </div>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+    <script>
+        const img = document.getElementById("imgMapa");
+        const modal = document.getElementById("modalZoom");
+        const modalImg = document.getElementById("imagenAmpliada");
+        const cerrar = document.getElementById("cerrarModal");
+
+        img.onclick = function () {
+            modal.style.display = "block";
+            // Asignar src
+            modalImg.src = this.src;
+
+            // Asegurar que la imagen no exceda la ventana en dispositivos pequeños
+            modalImg.style.maxHeight = (window.innerHeight * 0.85) + "px";
+            modalImg.style.maxWidth = "95%";
+        }
+
+        cerrar.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cerrar al hacer clic fuera de la imagen
+        modal.onclick = function (e) {
+            if (e.target === modal) modal.style.display = "none";
+        }
+
+        // (Opcional) si el usuario redimensiona la ventana mientras el modal está abierto
+        window.addEventListener('resize', function () {
+            if (modal.style.display === "block") {
+                modalImg.style.maxHeight = (window.innerHeight * 0.85) + "px";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETAPA 1</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
+        }
+
+        .contenedor-central {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 95%;
+            max-width: 1200px;
+            min-height: 70vh;
+            margin: 40px auto;
+            line-height: 1.8;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2.3rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 25px;
+            margin-bottom: 40px;
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f6f7;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        /* ===== Imagen normal ===== */
+        .imagen-zoom {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-zoom:hover {
+            transform: scale(1.02);
+        }
+
+        /* ===== Modal (fondo oscuro) ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .cerrar {
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .cerrar:hover {
+            color: #3498db;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .acciones a:hover {
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo_uni.png" alt="Logo">
+        </div>
+        <h1 class="titulo">Ingeniería de Software 3</h1>
+        <div class="acciones">
+            <a href="itil.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor-central">
+
+            <h2>Servicio que ofrece QuickOrder</h2>
+
+            <table>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td><strong>Servicio</strong></td>
+                    <td>
+                        Plataforma web para la gestión de pedidos de comida, que permite a los clientes registrarse,
+                        iniciar sesión,
+                        seleccionar platillos, pagar y recibir su pedido.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Consumidores</strong></td>
+                    <td>
+                        <ul>
+                            <li><strong>Clientes:</strong> Realizan pedidos y pagos en línea.</li>
+                            <li><strong>Cocineros:</strong> Reciben pedidos y preparan la comida.</li>
+                            <li><strong>Administrador:</strong> Agrega, edita y elimina platillos, y supervisa los
+                                pedidos.</li>
+                            <li><strong>Equipo TI:</strong> Mantiene el sistema operativo y seguro.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Valor que entrega</strong></td>
+                    <td>
+                        <ul>
+                            <li><strong>Agilidad:</strong> Elimina filas presenciales para ordenar.</li>
+                            <li><strong>Seguridad:</strong> Login con validación y recuperación de contraseña.</li>
+                            <li><strong>Eficiencia:</strong> La cocina recibe los pedidos en tiempo real.</li>
+                            <li><strong>Comodidad:</strong> Interfaz clara y oscura configurable según preferencia.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Identificación de Brechas ITIL</h2>
+
+            <table>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Situación Actual</th>
+                </tr>
+                <tr>
+                    <td><strong>Gestión de incidentes</strong></td>
+                    <td>
+                        Si ocurre una falla (login, pagos, caída de servidor), el equipo revisa manualmente y soluciona
+                        reiniciando el servicio o corrigiendo directamente en la base de datos. <br><br>
+                        No existe un canal formal de reporte para los usuarios.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Proceso de cambios</strong></td>
+                    <td>
+                        Los cambios se realizan directamente sobre el código y la base de datos sin documentación
+                        formal. <br><br>
+                        No se registra quién solicitó el cambio ni se realizan pruebas antes de implementarlo en
+                        producción.
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Medición del éxito</strong></td>
+                    <td>
+                        No existen métricas automáticas. <br><br>
+                        El éxito se evalúa únicamente si el usuario logra completar su pedido y la cocina lo recibe.
+                        <br><br>
+                        No se registran estadísticas de tiempo de login, pedidos completados ni tasa de errores.
+                    </td>
+                </tr>
+            </table>
+
+            <h2>Mapa de Valor Visual</h2>
+            <img src="../img/Mapa2.png" alt="Mapa" class="imagen-zoom" id="imgMapa">
+
+        </div>
+    </main>
+
+    <!-- Modal para zoom -->
+    <div id="modalZoom" class="modal">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <img class="modal-content" id="imagenAmpliada">
+    </div>
+
+    <footer>
+        <p>© 2025 Universidad — Ingeniería de Software 3</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Elementos
+        const img = document.getElementById("imgMapa");
+        const modal = document.getElementById("modalZoom");
+        const modalImg = document.getElementById("imagenAmpliada");
+        const cerrar = document.getElementById("cerrarModal");
+
+        // Abrir modal al hacer clic
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+
+        // Cerrar modal
+        cerrar.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cerrar al hacer clic fuera de la imagen
+        modal.onclick = function (e) {
+            if (e.target === modal) modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

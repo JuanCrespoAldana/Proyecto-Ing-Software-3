@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Clases</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            background: #f0f2f5;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: #2C3E50;    
+            color: white;
+        }
+
+        header img { height: 50px; }
+
+        .titulo { font-size: 1.8rem; }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contenedor-central {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            width: 90%;
+            max-width: 1100px;
+            min-height: 70vh;
+            margin: 40px auto;
+        }
+
+        .contenedor-central h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1A5276;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            color: #1A5276;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center; /* centrado horizontal */
+            vertical-align: middle; /* centrado vertical */
+        }
+
+        th {
+            background: #1A5276;
+            color: white;
+            font-size: 1rem;
+        }
+
+        td {
+            border-bottom: 1px solid #ddd;
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1A5276;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="../img/logo_uni.png" alt="Logo"></div>
+    <h1 class="titulo">Ingeniería de Software 3</h1>
+    <div class="acciones">
+        <a href="modelo.html" class="icono"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="../index.html" class="icono"><i class="fa-solid fa-house"></i></a>
+    </div>
+</header>
+
+<main>
+    <div class="contenedor-central">
+        <h2>Diagrama de Clases</h2>
+        <p style="text-align:center;">El siguiente diagrama representa las clases principales de <strong>QuickOrder</strong>, sus atributos y métodos.</p>
+
+        <!-- Clase Usuario -->
+        <h3>Clase Usuario</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idUsuario<br>- nombre<br>- correo<br>- contraseña<br>- rol</td>
+                <td>+ registrarUsuario()<br>+ iniciarSesion()<br>+ cerrarSesion()<br>+ actualizarPerfil()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Administrador -->
+        <h3>Clase Administrador</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>Hereda de Usuario</td>
+                <td>+ gestionarProductos()<br>+ generarReportes()<br>+ administrarUsuarios()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Cliente -->
+        <h3>Clase Cliente</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>Hereda de Usuario</td>
+                <td>+ realizarPedido()<br>+ pagarPedido()<br>+ verHistorialPedidos()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Producto -->
+        <h3>Clase Producto</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idProducto<br>- nombre<br>- descripción<br>- precio<br>- stock</td>
+                <td>+ registrarProducto()<br>+ actualizarProducto()<br>+ eliminarProducto()<br>+ consultarProducto()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Pedido -->
+        <h3>Clase Pedido</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idPedido<br>- fecha<br>- estado<br>- total<br>- idCliente</td>
+                <td>+ crearPedido()<br>+ cancelarPedido()<br>+ actualizarEstado()<br>+ calcularTotal()</td>
+            </tr>
+        </table>
+
+        <!-- Clase DetallePedido -->
+        <h3>Clase DetallePedido</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idDetalle<br>- cantidad<br>- subtotal<br>- idPedido<br>- idProducto</td>
+                <td>+ agregarDetalle()<br>+ calcularSubtotal()<br>+ eliminarDetalle()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Carrito -->
+        <h3>Clase Carrito</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idCarrito<br>- idCliente<br>- listaProductos</td>
+                <td>+ agregarProducto()<br>+ eliminarProducto()<br>+ vaciarCarrito()<br>+ calcularTotal()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Pago -->
+        <h3>Clase Pago</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idPago<br>- monto<br>- fecha<br>- metodo<br>- idPedido</td>
+                <td>+ registrarPago()<br>+ validarPago()<br>+ generarComprobante()</td>
+            </tr>
+        </table>
+
+        <!-- Clase Reporte -->
+        <h3>Clase Reporte</h3>
+        <table>
+            <tr><th>Atributos</th><th>Métodos</th></tr>
+            <tr>
+                <td>- idReporte<br>- tipo<br>- fechaGeneracion<br>- datos</td>
+                <td>+ generarReporte()<br>+ exportarPDF()<br>+ exportarExcel()</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 Universidad — Ingeniería de Software 3</p>
+</footer>
+
+<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
+</html>

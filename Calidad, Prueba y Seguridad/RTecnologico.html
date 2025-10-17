@@ -4,42 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Contenedor Central</title>
+    <title>Riesgo Tecnológico</title>
     <link rel="stylesheet" href="../styles.css">
     <style>
-        .contenedor-central {
-            background: #ecf0f1;
-            padding: 40px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        body {
+            background: #f4f6f7;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2C3E50;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2C3E50;
+            padding: 15px 40px;
+            color: white;
         }
 
         .contenedor-central {
-            background: #ecf0f1;
-            padding: 40px;
+            background: #ffffff;
+            padding: 50px;
             border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
             width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            margin: 40px auto;
+            line-height: 1.8;
         }
 
         .contenedor-central h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: bold;
-            color: #2C3E50;
-            margin-bottom: 30px;
+            color: #1A5276;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #3b80ad;
+            padding-bottom: 10px;
         }
 
-        .contenedor-central img {
-            max-width: 650px;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fdfdfd;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #1A5276;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        tr:hover {
+            background-color: #ecf0f1;
+        }
+
+        td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #2C3E50;
+            color: white;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        .acciones a {
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .acciones a:hover {
+            color: #3498db;
         }
     </style>
 </head>
@@ -59,15 +115,47 @@
     <main>
         <div class="contenedor-central">
             <h2>Riesgo Tecnológico</h2>
-            <img src="../img/Tecnologico.png" alt="Imagen Ejemplo">
+
+            <table>
+                <tr>
+                    <th>Riesgo</th>
+                    <th>Nivel</th>
+                    <th>Acción de Mitigación</th>
+                </tr>
+                <tr>
+                    <td>Fallas en la infraestructura de red</td>
+                    <td>Alto</td>
+                    <td>Implementar protocolos de respaldo, mantenimiento preventivo y monitoreo constante.</td>
+                </tr>
+                <tr>
+                    <td>Virus y malware</td>
+                    <td>Alto</td>
+                    <td>Actualizar antivirus periódicamente y realizar auditorías de seguridad mensuales.</td>
+                </tr>
+                <tr>
+                    <td>Obsolescencia de hardware</td>
+                    <td>Medio</td>
+                    <td>Planificar actualizaciones anuales del hardware y verificar compatibilidad del software.</td>
+                </tr>
+                <tr>
+                    <td>Pérdida de datos por fallos del sistema</td>
+                    <td>Alto</td>
+                    <td>Implementar copias de seguridad automáticas y almacenamiento en la nube.</td>
+                </tr>
+                <tr>
+                    <td>Interrupciones eléctricas</td>
+                    <td>Medio</td>
+                    <td>Utilizar sistemas UPS y generar planes de contingencia para la continuidad del servicio.</td>
+                </tr>
+            </table>
         </div>
     </main>
 
     <footer>
         <p>© 2025 Universidad — Ingeniería de Software 3</p>
     </footer>
-</body>
 
-<script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/17cefd659f.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
